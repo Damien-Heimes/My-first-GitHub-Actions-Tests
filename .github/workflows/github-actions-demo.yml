@@ -2,6 +2,10 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push, workflow_dispatch]
 jobs:
+  self-hosted-runner:
+    runs-on: [self-hosted]
+    steps:
+      - run: echo "This runs on my self-hosted runner!"
   Generic_workflow:
     runs-on: ubuntu-latest
     steps:
