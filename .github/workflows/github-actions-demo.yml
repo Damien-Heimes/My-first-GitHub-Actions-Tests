@@ -23,7 +23,7 @@ jobs:
       - run: echo "This job's status is ${{ job.status }}."
       - run: cat ${{ github.workspace }}/hello_alex.txt
   Python_tests:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
